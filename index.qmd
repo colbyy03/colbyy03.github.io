@@ -1,7 +1,11 @@
 ---
 title: "Colby Yurkiw"
+
+about:
+  template: jolla
+  image: images/profile.JPG
 ---
 
-This is a Quarto website.
+I am 23 and from Kelowna, BC. I took my undergraduate at UBCO in Mechanical Engineering. I enjoy playing sports such as volleyball (which I was able to play for Team BC!), basketball, and many others. I worked for BGIS this past summer on the AI and Data Governance team and I am excited to develop my data science skills through MDS!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+

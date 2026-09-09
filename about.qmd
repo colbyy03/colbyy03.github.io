@@ -2,4 +2,11 @@
 title: "About"
 ---
 
-About this site
+## Background
+I was born in Winnipeg, MB and moved to British Columbia when I was 5 years old. I attended high school and university (undergraduate) in Kelowna, BC. My undergraduate degree was in Mechanical Engineering. The past two summers I worked for BGIS remotely (based in Markham, ON) as an Engineering Intern and AI and Data Governance Intern.
+
+## Why data science
+I took many machine learning, data courses and microcomputer courses throughout my undergraduate degree and thouroughly enjoyed the content. I was then exposed to more in-depth data science when I worked on my capstone project where I used RAG to create a building code checking plugin for Revit. I really enjoyed the concepts and decided to pursue a Master of Data Science.
+
+## Outside of data science
+I enjoy playing and watching a lot of sports. The ones I play frequently are volleyball, basketball, tennis, hockey and golf and keep up with the NBA and NFL. These are the most likely things you will find me doing on a weekend! I also spend a lot of time with my friends and family. The summers are warm in Kelowna, so we spend a lot of time in the outdoors. In the winter I enjoy skiing at Big White. 

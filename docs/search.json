@@ -1,16 +1,72 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
     "section": "",
-    "text": "About this site"
+    "text": "My first weeks in MDS\n\n\n\n\n\n\n\n\nSep 8, 2026\n\n\nColby Yurkiw\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Colby Yurkiw",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "I am 23 and from Kelowna, BC. I took my undergraduate at UBCO in Mechanical Engineering. I enjoy playing sports such as volleyball (which I was able to play for Team BC!), basketball, and many others. I worked for BGIS this past summer on the AI and Data Governance team and I am excited to develop my data science skills through MDS!"
+  },
+  {
+    "objectID": "posts/first-weeks/index.html",
+    "href": "posts/first-weeks/index.html",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "The first three days of MDS were spent in orientation. I was able to meet many new friends and spend time with some old friends. We did many activities such as the Goose Hunt and hearing from multiple alumni of the program. The orientation got myself and my peers off to a great start in the MDS program."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html#orientation",
+    "href": "posts/first-weeks/index.html#orientation",
+    "title": "My first weeks in MDS",
+    "section": "",
+    "text": "The first three days of MDS were spent in orientation. I was able to meet many new friends and spend time with some old friends. We did many activities such as the Goose Hunt and hearing from multiple alumni of the program. The orientation got myself and my peers off to a great start in the MDS program."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html#first-week-classes",
+    "href": "posts/first-weeks/index.html#first-week-classes",
+    "title": "My first weeks in MDS",
+    "section": "First Week Classes",
+    "text": "First Week Classes\nThe start of lectures came and went quickly. I was able to review many concepts from my undergraduate and job experiences as well as begin venturing into many new learnings. I continued to spend time with many friends from orientation which was nice. Many of the labs were intensive, however I was able to learn and teach my peers and get everything completed for week 1’s courses."
+  },
+  {
+    "objectID": "posts/first-weeks/index.html#upcoming",
+    "href": "posts/first-weeks/index.html#upcoming",
+    "title": "My first weeks in MDS",
+    "section": "Upcoming",
+    "text": "Upcoming\nThis week I am learning many new concepts in Python, Github, R and Probability. Next week is our first quiz week so I will have to start preparing my cheatsheets and study materials leading into the weekend.\n\n\n\nOrientation day heading to campus."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I was born in Winnipeg, MB and moved to British Columbia when I was 5 years old. I attended high school and university (undergraduate) in Kelowna, BC. My undergraduate degree was in Mechanical Engineering. The past two summers I worked for BGIS remotely (based in Markham, ON) as an Engineering Intern and AI and Data Governance Intern."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About",
+    "section": "",
+    "text": "I was born in Winnipeg, MB and moved to British Columbia when I was 5 years old. I attended high school and university (undergraduate) in Kelowna, BC. My undergraduate degree was in Mechanical Engineering. The past two summers I worked for BGIS remotely (based in Markham, ON) as an Engineering Intern and AI and Data Governance Intern."
+  },
+  {
+    "objectID": "about.html#why-data-science",
+    "href": "about.html#why-data-science",
+    "title": "About",
+    "section": "Why data science",
+    "text": "Why data science\nI took many machine learning, data courses and microcomputer courses throughout my undergraduate degree and thouroughly enjoyed the content. I was then exposed to more in-depth data science when I worked on my capstone project where I used RAG to create a building code checking plugin for Revit. I really enjoyed the concepts and decided to pursue a Master of Data Science."
+  },
+  {
+    "objectID": "about.html#outside-of-data-science",
+    "href": "about.html#outside-of-data-science",
+    "title": "About",
+    "section": "Outside of data science",
+    "text": "Outside of data science\nI enjoy playing and watching a lot of sports. The ones I play frequently are volleyball, basketball, tennis, hockey and golf and keep up with the NBA and NFL. These are the most likely things you will find me doing on a weekend! I also spend a lot of time with my friends and family. The summers are warm in Kelowna, so we spend a lot of time in the outdoors. In the winter I enjoy skiing at Big White."
   }
 ]
