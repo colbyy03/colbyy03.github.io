@@ -14,49 +14,49 @@ From the top level of the repo:
 
 ```sh
 git clone git@github.com:colbyy03/colbyy03.github.io.git
-cd colbyy03@github.io
+cd colbyy03.github.io
 ```
 
 Set up the python environment:
 
-\`\`\`sh
+```sh
 uv sync
-\`\`\`
+```
 
 Start an R session:
 
-\`\`\`sh
+```sh
 R
-\`\`\`
+```
 
 Set up the R environment:
 
-\`\`\`R
+```R
 renv::restore()
-\`\`\`
+```
 
 Select "y":
-\`\`\`sh
+```sh
 y
-\`\`\`
+```
 
 Close the R session:
 
-\`\`\`R
+```R
 q()
-\`\`\`
+```
 
 Select "n":
 
-\`\`\`sh
+```sh
 n
-\`\`\`
+```
 
 Render the site:
 
-\`\`\`sh
+```sh
 uv run quarto render
-\`\`\`
+```
 
 ## Local site viewing
 
@@ -64,9 +64,9 @@ The built site is accessible in `docs/` locally. Open the `docs/index.html` fold
 
 View the site:
 
-\`\`\`sh
+```sh
 quarto preview
-\`\`\`
+```
 
 ## Data source
 
