@@ -194,15 +194,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Data: <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a>, Palmer Station Antarctica LTER.</p>
 <p><strong>Load Libraries</strong></p>
-<p><em>First we will load in pandas, matplotlib and palmerpenguins for our analysis of the penguins dataset.</em></p>
-<div id="743e5e5b" class="cell" data-message="false" data-execution_count="1">
+<p>First we will load in pandas, matplotlib and palmerpenguins for our analysis of the penguins dataset.</p>
+<div id="004daecd" class="cell" data-message="false" data-execution_count="1">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><strong>Looking at the data set</strong></p>
-<p><em>First, lets take a look at the dataset to see what we are working with.</em></p>
-<div id="41f32eba" class="cell" data-execution_count="2">
+<p>First, lets take a look at the dataset to see what we are working with.</p>
+<div id="fb414862" class="cell" data-execution_count="2">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(penguins.head())</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -224,10 +224,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 ['Adelie', 'Chinstrap', 'Gentoo']</code></pre>
 </div>
 </div>
-<p><em>The data set includes 3 different species: Adelie, Chinstrap, and Gentoo penguins. There are entries for the penguins bills, flippers, origin, sex and measurement year.</em></p>
+<p>The data set includes 3 different species: Adelie, Chinstrap, and Gentoo penguins. There are entries for the penguins bills, flippers, origin, sex and measurement year.</p>
 <p><strong>What are we analyzing</strong></p>
-<p><em>We will be analyzing the size differences between different species of penguins. The purpose of this analysis is to see if penguin species differ enough in size to visually distinguish the species simply based on physical measurements.</em></p>
-<div id="4177b89e" class="cell" data-execution_count="3">
+<p>We will be analyzing the size differences between different species of penguins. The purpose of this analysis is to see if penguin species differ enough in size to visually distinguish the species simply based on physical measurements.</p>
+<div id="96d67344" class="cell" data-execution_count="3">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>penguins_grouped <span class="op">=</span> penguins.groupby(<span class="st">"species"</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> penguins_grouped:</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>species<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="bu">len</span>(group)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -237,7 +237,7 @@ Chinstrap       68
 Gentoo          124</code></pre>
 </div>
 </div>
-<p><em>The most sampled species in the dataset is the Adelie species, followed by the Gentoo and the Chinstrap species.</em></p>
+<p>The most sampled species in the dataset is the Adelie species, followed by the Gentoo and the Chinstrap species.</p>
 <p><strong>Visualization of Species Sizes</strong></p>
 <p><em>Now, we can do a visual comparison of the species by plotting.</em></p>
 <div id="cell-fig-penguin-species-sizes" class="cell" data-execution_count="4">
@@ -264,7 +264,7 @@ Figure&nbsp;1: Comparing bill length and body mass for penguin species
 </div>
 </div>
 </div>
-<p><em>We can observe a clear trend in the visual. Adelie penguins are on average, smaller on all metrics compared to Chinstrap and Gentoo. Gentoo penguins are larger than both Chinstrap and Adelie penguins in body mass, but have similar bill length to Chinstrap penguins. Therefore, it is possible to identify each of these species simply based on physical factors, however there is some overlap.</em></p>
+<p>We can observe a clear trend in the visual. Adelie penguins are on average, smaller on all metrics compared to Chinstrap and Gentoo. Gentoo penguins are larger than both Chinstrap and Adelie penguins in body mass, but have similar bill length to Chinstrap penguins. Therefore, it is possible to identify each of these species simply based on physical factors, however there is some overlap.</p>
 
 
 

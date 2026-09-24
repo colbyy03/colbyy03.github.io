@@ -10,7 +10,7 @@ via dplyr package
 
 **Load Libraries**
 
-_First we will load in the dplyr and ggplot2 libraries for our analysis of the Star Wars dataset._
+First we will load in the dplyr and ggplot2 libraries for our analysis of the Star Wars dataset.
 
 ```{r}
 #| message: false
@@ -23,7 +23,7 @@ library(ggplot2)
 
 **What are we analyzing**
 
-_We will be analyzing the size differences between humans and non-human species in the Star Wars films. The purpose of this analysis is to determine if non-human species in the films follow real world (human-like) proportions. Here, we split the starwars dataset into Human and other species to see how the data is distributed._
+We will be analyzing the size differences between humans and non-human species in the Star Wars films. The purpose of this analysis is to determine if non-human species in the films follow real world (human-like) proportions. Here, we split the starwars dataset into Human and other species to see how the data is distributed.
 
 ```{r}
 count_human <- starwars |>
@@ -37,12 +37,12 @@ count_human <- starwars |>
 count_human
 ```
 
-_There are almost double the amount of non-human species to humans. This makes sense as there are many different species grouped into non-human._
+There are almost double the amount of non-human species to humans. This makes sense as there are many different species grouped into non-human.
 
 
 **Visualization of Human to Non-human Proportions**
 
-_Now, we will plot human character sizes against non-human character sizes to visually identify any differences._
+Now, we will plot human character sizes against non-human character sizes to visually identify any differences.
 
 _NOTE: there was one non-human character skewing the graph, so it was removed as an outlier. We will get to this later._
 
@@ -59,12 +59,12 @@ starwars |>
   ggplot(aes(x = height, y = mass, color = binary_species)) + geom_point()
 ```
 
-_We can observe a clear cluster in the center of human and other. This cluster is between heights of 150 to 200 centimeters and mass of 70 to 90 kg. However, we can note that there are many species that are not human which are much smaller than typical human height and mass, and also some non-human species which extend much beyond the maximum human height. Therefore, we can conclude that non-human species in the series do not strictly follow human sizing._
+We can observe a clear cluster in the center of human and other. This cluster is between heights of 150 to 200 centimeters and mass of 70 to 90 kg. However, we can note that there are many species that are not human which are much smaller than typical human height and mass, and also some non-human species which extend much beyond the maximum human height. Therefore, we can conclude that non-human species in the series do not strictly follow human sizing.
 
 
 **What was the outlier?**
 
-_Below we determine which character had an extreme value for mass, extending much beyond any other characters._
+Below we determine which character had an extreme value for mass, extending much beyond any other characters.
 
 ```{r}
 filtered_out <- starwars |>
@@ -74,4 +74,4 @@ filtered_out <- starwars |>
 filtered_out
 ```
 
-_The character was Jabba Desilijic Tiure which is a Hutt (non-human) species with an astonishing mass of 1358 kg!_
+The character was Jabba Desilijic Tiure which is a Hutt (non-human) species with an astonishing mass of _1358 kg!_

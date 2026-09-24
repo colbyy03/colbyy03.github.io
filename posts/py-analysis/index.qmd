@@ -10,7 +10,7 @@ Palmer Station Antarctica LTER.
 
 **Load Libraries**
 
-_First we will load in pandas, matplotlib and palmerpenguins for our analysis of the penguins dataset._
+First we will load in pandas, matplotlib and palmerpenguins for our analysis of the penguins dataset.
 
 ```{python}
 #| message: false
@@ -23,7 +23,7 @@ from palmerpenguins import load_penguins
 
 **Looking at the data set**
 
-_First, lets take a look at the dataset to see what we are working with._
+First, lets take a look at the dataset to see what we are working with.
 
 ```{python}
 penguins = load_penguins()
@@ -33,11 +33,11 @@ print([species for species, _ in penguins.groupby("species")])
 ```
 
 
-_The data set includes 3 different species: Adelie, Chinstrap, and Gentoo penguins. There are entries for the penguins bills, flippers, origin, sex and measurement year._
+The data set includes 3 different species: Adelie, Chinstrap, and Gentoo penguins. There are entries for the penguins bills, flippers, origin, sex and measurement year.
 
 **What are we analyzing**
 
-_We will be analyzing the size differences between different species of penguins. The purpose of this analysis is to see if penguin species differ enough in size to visually distinguish the species simply based on physical measurements._
+We will be analyzing the size differences between different species of penguins. The purpose of this analysis is to see if penguin species differ enough in size to visually distinguish the species simply based on physical measurements.
 
 ```{python}
 penguins_grouped = penguins.groupby("species")
@@ -45,7 +45,7 @@ for species, group in penguins_grouped:
     print(f"{species:<15} {len(group)}")
 ```
 
-_The most sampled species in the dataset is the Adelie species, followed by the Gentoo and the Chinstrap species._
+The most sampled species in the dataset is the Adelie species, followed by the Gentoo and the Chinstrap species.
 
 
 **Visualization of Species Sizes**
@@ -70,4 +70,4 @@ plt.show()
 ```
 
 
-_We can observe a clear trend in the visual. Adelie penguins are on average, smaller on all metrics compared to Chinstrap and Gentoo. Gentoo penguins are larger than both Chinstrap and Adelie penguins in body mass, but have similar bill length to Chinstrap penguins. Therefore, it is possible to identify each of these species simply based on physical factors, however there is some overlap._
+We can observe a clear trend in the visual. Adelie penguins are on average, smaller on all metrics compared to Chinstrap and Gentoo. Gentoo penguins are larger than both Chinstrap and Adelie penguins in body mass, but have similar bill length to Chinstrap penguins. Therefore, it is possible to identify each of these species simply based on physical factors, however there is some overlap.
