@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Colby Yurkiw">
+<meta name="dcterms.date" content="2026-09-23">
 
-<title>index – Colby Yurkiw</title>
+<title>Comparing the size of penguin species – Colby Yurkiw</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +27,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -122,11 +159,112 @@ ul.task-list li input[type="checkbox"] {
         
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Comparing the size of penguin species</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Colby Yurkiw </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Data: <a href="https://allisonhorst.github.io/palmerpenguins/">Palmer Penguins</a>, Palmer Station Antarctica LTER.</p>
+<p><strong>Load Libraries</strong></p>
+<p><em>First we will load in pandas, matplotlib and palmerpenguins for our analysis of the penguins dataset.</em></p>
+<div id="cc88118e" class="cell" data-message="false" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> palmerpenguins <span class="im">import</span> load_penguins</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Looking at the data set</strong></p>
+<p><em>First, lets take a look at the dataset to see what we are working with.</em></p>
+<div id="ec95fa3f" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>penguins <span class="op">=</span> load_penguins()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(penguins.head())</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>([species <span class="cf">for</span> species, _ <span class="kw">in</span> penguins.groupby(<span class="st">"species"</span>)])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  species     island  bill_length_mm  bill_depth_mm  flipper_length_mm  \
+0  Adelie  Torgersen            39.1           18.7              181.0   
+1  Adelie  Torgersen            39.5           17.4              186.0   
+2  Adelie  Torgersen            40.3           18.0              195.0   
+3  Adelie  Torgersen             NaN            NaN                NaN   
+4  Adelie  Torgersen            36.7           19.3              193.0   
+
+   body_mass_g     sex  year  
+0       3750.0    male  2007  
+1       3800.0  female  2007  
+2       3250.0  female  2007  
+3          NaN     NaN  2007  
+4       3450.0  female  2007  
+['Adelie', 'Chinstrap', 'Gentoo']</code></pre>
+</div>
+</div>
+<p><em>The data set includes 3 different species: Adelie, Chinstrap, and Gentoo penguins. There are entries for the penguins bills, flippers, origin, sex and measurement year.</em></p>
+<p><strong>What are we analyzing</strong></p>
+<p><em>We will be analyzing the size differences between different species of penguins. The purpose of this analysis is to see if penguin species differ enough in size to visually distinguish the species simply based on physical measurements.</em></p>
+<div id="57cb7dee" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>penguins_grouped <span class="op">=</span> penguins.groupby(<span class="st">"species"</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> penguins_grouped:</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>species<span class="sc">:&lt;15}</span><span class="ss"> </span><span class="sc">{</span><span class="bu">len</span>(group)<span class="sc">}</span><span class="ss">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Adelie          152
+Chinstrap       68
+Gentoo          124</code></pre>
+</div>
+</div>
+<p><em>The most sampled species in the dataset is the Adelie species, followed by the Gentoo and the Chinstrap species.</em></p>
+<p><strong>Visualization of Species Sizes</strong></p>
+<p><em>Now, we can do a visual comparison of the species by plotting.</em></p>
+<div id="cell-fig-penguin-species-sizes" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>fig, axs <span class="op">=</span> plt.subplots()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> species, group <span class="kw">in</span> penguins_grouped:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    axs.scatter(group[<span class="st">"bill_length_mm"</span>], group[<span class="st">"body_mass_g"</span>], label <span class="op">=</span> species)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>axs.set_xlabel(<span class="st">"Bill Length (mm)"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>axs.set_ylabel(<span class="st">"Body Mass (g)"</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>axs.legend(title <span class="op">=</span> <span class="st">"Species"</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div id="fig-penguin-species-sizes" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-penguin-species-sizes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-penguin-species-sizes-output-1.png" width="602" height="431" class="figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-penguin-species-sizes-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Comparing bill length and body mass for penguin species
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><em>We can observe a clear trend in the visual. Adelie penguins are on average, smaller on all metrics compared to Chinstrap and Gentoo. Gentoo penguins are larger than both Chinstrap and Adelie penguins in body mass, but have similar bill length to Chinstrap penguins. Therefore, it is possible to identify each of these species simply based on physical factors, however there is some overlap.</em></p>
 
 
 
