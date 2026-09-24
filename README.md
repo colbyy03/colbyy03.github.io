@@ -72,3 +72,7 @@ quarto preview
 
 - [Star Wars API](https://swapi.dev/), via dplyr package. No network access needed.
 - [Palmer Penguins](https://allisonhorst.github.io/palmerpenguins/), Palmer Station Antarctica LTER. No network access needed.
+
+## AI Disclosure
+
+- GenAI (Claude Sonnet 5) was used for debugging and setup.
