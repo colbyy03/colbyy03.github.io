@@ -50,7 +50,7 @@ The most sampled species in the dataset is the Adelie species, followed by the G
 
 **Visualization of Species Sizes**
 
-_Now, we can do a visual comparison of the species by plotting._
+Now, we can do a visual comparison of the species by plotting.
 
 ```{python}
 #| label: fig-penguin-species-sizes
