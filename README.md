@@ -12,10 +12,10 @@ This repository serves as a personal Quarto website and professional portfolio. 
 
 From the top level of the repo:
 
-\`\`\`sh
+```sh
 git clone git@github.com:colbyy03/colbyy03.github.io.git
 cd colbyy03@github.io
-\`\`\`
+```
 
 Set up the python environment:
 
